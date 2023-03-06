@@ -1,4 +1,4 @@
-import InputBase from "@mui/material/InputBase";
+import { InputBase, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const Search = styled("div")(({ theme }) => ({
@@ -38,3 +38,19 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
+
+export const BoxContainerStyled = styled(Box)({
+  "&.MuiBox-root": {
+    display: "flex",
+    justifyContent: "flex-start",
+    width: "70%",
+    marginLeft: 68,
+    "@media (max-width: 800px)": {
+      marginLeft: "10px",
+      justifyContent: "center",
+      width: "90%",
+      position: "absolute",
+      top: "76px",
+    },
+  },
+});

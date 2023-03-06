@@ -12,6 +12,5 @@ export const MyButton = styled(Button)({
     color: "#091625",
     textTransform: "capitalize",
     paddingLeft: "8px",
-    height: "16px",
   },
 });

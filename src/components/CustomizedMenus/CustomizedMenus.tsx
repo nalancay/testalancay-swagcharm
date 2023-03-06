@@ -54,8 +54,6 @@ export default function CustomizedMenus(props: CustomizedMenusProps) {
     setAnchorEl(event.currentTarget);
   };
 
-  //const stylesMain = props?.stylesCustom ? props.stylesCustom : {};
-
   const handleClose = (event: any) => {
     if (setSelectOptionQuantity) {
       setSelectOptionQuantity(event.target.innerText);

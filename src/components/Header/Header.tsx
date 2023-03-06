@@ -7,8 +7,8 @@ import { Person2Outlined, ShoppingBagOutlined } from "@mui/icons-material";
 import {
   StyledBoxLogo,
   StyledLink,
-  StyledToolbar1,
   StyledToolbar2,
+  Toolbar1Styled,
 } from "./Header.styles";
 import SearchBar from "../SearchBar";
 
@@ -23,7 +23,7 @@ export default function Header(props: HeaderProps) {
   const { sections } = props;
   return (
     <React.Fragment>
-      <Toolbar sx={StyledToolbar1}>
+      <Toolbar1Styled>
         <Box
           component="img"
           sx={{ StyledBoxLogo }}
@@ -31,7 +31,7 @@ export default function Header(props: HeaderProps) {
           src={"assets/swagcharm_logo.svg"}
         />
         <SearchBar />
-        <Box sx={{ display: "flex", gap: 3 }}>
+        <Box sx={{ display: "flex", gap: "10px" }}>
           <Box
             sx={{
               display: "flex",
@@ -81,7 +81,7 @@ export default function Header(props: HeaderProps) {
             </Button>
           </Box>
         </Box>
-      </Toolbar>
+      </Toolbar1Styled>
       <Toolbar component="nav" variant="dense" sx={StyledToolbar2}>
         {sections.map((section) => (
           <Link

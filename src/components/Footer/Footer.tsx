@@ -78,7 +78,9 @@ export default function Footer() {
           </Grid>
           <Grid item>
             <Box sx={{ display: "flex", gap: 2 }}>
-              <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Box
+                sx={{ display: "flex", alignItems: "center", fontSize: "14px" }}
+              >
                 <Typography variant="body2" color="text.secondary">
                   Region:
                 </Typography>
@@ -87,7 +89,9 @@ export default function Footer() {
                   defaultOption={itemsRegion[0].name}
                 />
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Box
+                sx={{ display: "flex", alignItems: "center", fontSize: "14px" }}
+              >
                 <Typography variant="body2" color="text.secondary">
                   Language:
                 </Typography>

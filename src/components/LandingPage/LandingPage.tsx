@@ -5,7 +5,6 @@ import RecommendedProducts from "../RecommendedProducts";
 import { RecommmendedProducts } from "./LandingPage.constants";
 import { styled } from "@material-ui/core/styles";
 import { useProductCart } from "../../hooks/useProductCart";
-import { useEffect } from "react";
 
 const ContainerGridStyled = styled(Container)({
   "&.MuiContainer-root": {
