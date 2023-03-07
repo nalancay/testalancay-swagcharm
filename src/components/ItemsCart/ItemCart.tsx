@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { DeleteForeverOutlined } from "@mui/icons-material";
 import { Box, Button, Typography } from "@mui/material";
-import CustomizedMenus from "../CustomizedMenus";
+import CustomizedSelect from "../shared/CustomizedSelect";
 import { DetailsProduct, getStockOptions } from "./ItemCart.utils";
 
 type ProductType = {
@@ -94,7 +94,7 @@ export const ItemCart = ({
             <Typography sx={{ mr: 1 }}>
               <b>Quantity:</b>
             </Typography>
-            <CustomizedMenus
+            <CustomizedSelect
               items={getStockOptions(stock)}
               defaultOption={selectOptionQuantity.toString()}
               setSelectOptionQuantity={setSelectOptionQuantity}

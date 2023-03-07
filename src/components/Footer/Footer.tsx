@@ -10,7 +10,7 @@ import {
   titleLinksOfHelp,
   titleLinksOfInformation,
 } from "./Footer.constants";
-import CustomizedMenus from "../CustomizedMenus";
+import CustomizedSelect from "../shared/CustomizedSelect";
 import Copyright, { GridItemSection, IconLinkSocial } from "./Footer.utils";
 
 export default function Footer() {
@@ -84,7 +84,7 @@ export default function Footer() {
                 <Typography variant="body2" color="text.secondary">
                   Region:
                 </Typography>
-                <CustomizedMenus
+                <CustomizedSelect
                   items={itemsRegion}
                   defaultOption={itemsRegion[0].name}
                 />
@@ -95,7 +95,7 @@ export default function Footer() {
                 <Typography variant="body2" color="text.secondary">
                   Language:
                 </Typography>
-                <CustomizedMenus
+                <CustomizedSelect
                   items={itemsLanguage}
                   defaultOption={itemsLanguage[0].name}
                 />

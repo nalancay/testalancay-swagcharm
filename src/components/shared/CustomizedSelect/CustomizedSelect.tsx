@@ -2,11 +2,11 @@ import React from "react";
 import { Box } from "@mui/system";
 import { styled } from "@mui/material/styles";
 import Menu, { MenuProps } from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import OptionItem from "@mui/material/MenuItem";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { MyButton } from "./CustomizeMenus.styled";
+import { ButtonStyled } from "./CustomizedSelect.styled";
 
-const StyledMenu = styled((props: MenuProps) => (
+const StyledSelect = styled((props: MenuProps) => (
   <Menu
     elevation={0}
     anchorOrigin={{
@@ -35,7 +35,7 @@ const StyledMenu = styled((props: MenuProps) => (
   },
 }));
 
-interface CustomizedMenusProps {
+interface CustomizedSelectProps {
   items: ReadonlyArray<{
     name?: string;
     src?: string;
@@ -46,7 +46,7 @@ interface CustomizedMenusProps {
   stylesCustom?: { borderBottom: string; backgroundColor: string };
 }
 
-export default function CustomizedMenus(props: CustomizedMenusProps) {
+export default function CustomizedSelect(props: CustomizedSelectProps) {
   const { items, defaultOption, setSelectOptionQuantity } = props;
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -63,7 +63,7 @@ export default function CustomizedMenus(props: CustomizedMenusProps) {
 
   return (
     <div>
-      <MyButton
+      <ButtonStyled
         id="demo-customized-button"
         aria-controls={open ? "demo-customized-menu" : undefined}
         aria-haspopup="true"
@@ -93,8 +93,8 @@ export default function CustomizedMenus(props: CustomizedMenusProps) {
         >
           {defaultOption}
         </Box>
-      </MyButton>
-      <StyledMenu
+      </ButtonStyled>
+      <StyledSelect
         id="demo-customized-menu"
         MenuListProps={{
           "aria-labelledby": "demo-customized-button",
@@ -104,7 +104,7 @@ export default function CustomizedMenus(props: CustomizedMenusProps) {
         onClose={handleClose}
       >
         {items.map((item, index) => (
-          <MenuItem key={index} onClick={handleClose} disableRipple>
+          <OptionItem key={index} onClick={handleClose} disableRipple>
             {items[0]?.src && (
               <Box
                 component="img"
@@ -114,9 +114,9 @@ export default function CustomizedMenus(props: CustomizedMenusProps) {
               />
             )}
             {item?.name || item?.optionValue}
-          </MenuItem>
+          </OptionItem>
         ))}
-      </StyledMenu>
+      </StyledSelect>
     </div>
   );
 }

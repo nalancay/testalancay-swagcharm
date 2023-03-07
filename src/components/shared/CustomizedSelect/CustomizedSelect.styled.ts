@@ -1,7 +1,7 @@
 import Button from "@mui/material/Button";
 import { styled } from "@material-ui/core/styles";
 
-export const MyButton = styled(Button)({
+export const ButtonStyled = styled(Button)({
   "&.MuiButtonBase-root": {
     fontFamily: "Open Sans",
     fontStyle: "normal",
